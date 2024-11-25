@@ -22,7 +22,7 @@ html {
 }
 
 body {
-   background-image: url('Arka Plan.jpg'); /* Arka plan resmi yolu */
+   background-image: url('Adsız tasarım.jpg'); /* Arka plan resmi yolu */
    background-size: cover; /* Resmin boyutlarını, ekranı tamamen kaplayacak şekilde ayarla */
    background-position: right center; /* Resmi sağa hizala, dikeyde ortala */
    background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
