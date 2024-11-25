@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PediatriYoğunBakım/PediatriYoğunBakım.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>PEDİATRİ YOĞUN BAKIM</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Pencere önünün tozunun alınması.
+            <br>&#9734; Sandalyelerin silinmesi.
+            <br>&#9734; Buzdolabının iç ve dış temizliği.
+            <br>&#9734; Kapıların silinmesi.
+            <br>&#9734; Malzeme ve cihaz dolaplarının dış tozunun alınması.
+            <br>&#9734; Depoların temizliği.
+            <br>&#9734; Klima.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

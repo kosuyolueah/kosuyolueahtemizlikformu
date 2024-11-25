@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MikrobiyolojiLaboratuvarı/MikrobiyolojiLaboratuvarı.css".css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>Mikrobiyoloji Laboratuvarı</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Numune bankosu.
+            <br>&#9734; Numune taşıma çantaları.
+            <br>&#9734; Boya çalışma lavabosu.
+            <br>&#9734; El yıkama alanı temizliği.
+            <br>&#9734; Lavabo ve musluk başlıkları (bölüm içi).
+            <br>&#9734; Zemin temizliği.
+            <br>&#9734; Cihaz ve monitörlerin temizliği.
+            <br>&#9734; Ünitede kullanılan elektronik cihazların temizliği.
+            <br>&#9734; Sık dokunulan yüzeylerin temizliği.
+            <br>&#9734; Çalışma tezgahları ve dosyalıkların silinmesi.
+            <br>&#9734; Masaların silinmesi.
+            <br>&#9734; Personel çalışma ve dinlenme ofisleri  temizliği.
+            <br>&#9734; Tepsilerin temizliği.
+            <br>&#9734; Kültür çalışma odası ve güvenlik kabinleri temizliği.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

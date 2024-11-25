@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tee/Tee.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <h2>TEE</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <br><div class="kare-kutu">
+        <p>&#9734; EKG monitörlerinin temizliği.
+        <br>&#9734; İşlem odasındaki Lavaboların dezenfeksiyonu.
+        <br>&#9734; Zeminin paspaslanması.
+        <br>&#9734; Hasta giyinme soyunma kabinleri.
+        <br>&#9734; TEE problarının dezenfeksiyonu, laringoskop blade, gayd (klavuz tel), oksijen flowmetre, hasta ağızlığı.
+        <br>&#9734; Bilgisayar ve düzeneklerinin tozunun alınması.
+        <br>&#9734; Masa/desklerin ve çalışma bankosu silinmesi.
+        <br>&#9734; Pano, çerçeve, saat, telefon, ayna, askılık, lcd ekran, paravan, hastabaşı paneli tozunun alınması.
+        <br>&#9734; Kapı kolunun ve elektrik düğmesi silinmesi.
+        <br>&#9734; EKO Probu.
+        <br>&#9734; Aspiratör kavanoz temizliği, laringoskop handle, hasta sedyeleri.
+        <br>&#9734; Personel odası, depolar, işlem odaları genel temizliği.
+        <br>&#9734; Acil arabası ve defibrilatörün silinmesi.
+        <br>&#9734; Temizlik malzemeleri, paspas ve bezler.
+        <br>&#9734; Çarşaf ve diğer tekstil malzemeleri.
+        </p>
+    </div>
+    
+    <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

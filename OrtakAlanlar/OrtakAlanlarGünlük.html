@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OrtakAlanlar/OrtakAlanlar.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <h2>ORTAK KULLANIM ALANI</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <br><div class="kare-kutu">
+        <br><p>&#9734; Kapıların, elektrik düğmelerinin ve turnikelerin silinmesi.
+           <br>&#9734; Asansörlerin silinmesi.
+           <br>&#9734; Tıbbi Atık asansörünün silinmesi.
+           <br>&#9734; İdari kat temizliği.
+           <br>&#9734; Poliklinik odalarının temizliği.
+           <br>&#9734; Koridor zeminin paspaslanması.
+           <br>&#9734; Bahçe temizliği.
+           <br>&#9734; Hasta bekleme alanı temizliği.
+           <br>&#9734; Soyunma odalarının temizliği.
+           <br>&#9734; Sandalyelerin ve bekleme koltuklarının silinmesi.
+           <br>&#9734; Personel dinlenme alanı temizliği.
+           <br>&#9734; Malzeme depoları.
+           <br>&#9734; Telefon santrali.
+           <br>&#9734; Mescit.
+           <br>&#9734; Boyahane, atölye, teknisyen odası.
+           <br>&#9734; Otel klinik odaları.
+           <br>&#9734; Kardiyak Rehabilitasyon Birimi.
+           <br>&#9734; Terzihane.
+           <br>&#9734; Malzeme depoları (medikal depo, eczane depo, tıbbi sarf malzeme deposu, ayniyat-döner sermaye depo, çamaşırhane depo, temizlik malzeme deposu).
+           <br>&#9734; Çöp kovalarının temizliği.
+           <br>&#9734; Konferans, toplantı ve eğitim salonları.
+           <br>&#9734; Temizlik malzemeleri, paspas ve bezler.
+        </p>
+    </div>
+    
+    <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AtıkMahali/AtıkMahali.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>ATIK MAHALİ</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Evsel atık deposu temizliği.
+            <br>&#9734; Tehlikeli atık deposu temizliği.
+            <br>&#9734; Tıbbi atık deposu temizliği.
+            <br>&#9734; Tıbbi atık aracı (konteyner) temizliği.
+            <br>&#9734; Pano, çerçeve, saat, ayna, yangın söndürme  tüpü, elektrik paneli vb. tozunun alınması.
+            <br>&#9734; Kapıların silinmesi.
+            <br>&#9734; Kapı kolunun silinmesi.
+            <br>&#9734; Pencere ve cam temizliği.
+            <br>&#9734; Pencere önünün silinmesi.
+            <br>&#9734; Duvarları ve işaret levhalarının silinmesi.
+            <br>&#9734; Zeminin paspaslanması.
+            <br>&#9734; Personel odası genel temizliği.
+            <br>&#9734; Personel odası lavabo ve duş temizliği.
+            <br>&#9734; Elektrik düğmesi ve ısı nem ölçer.
+            <br>&#9734; Paspas arabası temizliği.
+            <br>&#9734; Temizlik malzemeleri (paspas ve bezler) temizliği.
+            <br>&#9734; Sıvı sabun kaplarının temizliği.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

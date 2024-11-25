@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BiyokimyaLaboratuvarı/BiyokimyaLaboratuvarı.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>BİYOKİMYA LABORATUVARI</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Yangın tüpü ve diğer malzemeler, elektrik paneli, ilk yardım kutusu  ve malzemeleri, ısı-nem ölçer, işaretleme ve isimlik levhaları, merdiven vb. malzemelerin silinmesi.
+            <br>&#9734; Kapıların silinmesi.
+            <br>&#9734; Pencere önü tozunun alınması.
+            <br>&#9734; Buzdolabı ve derin dondurucuların iç ve dış temizliği.
+            <br>&#9734; Atık kovaları temizliği.
+            <br>&#9734; Lambaların silinmesi.
+            <br>&#9734; Pencere ve camların temizliği.
+            <br>&#9734; Stor perde temizliği.
+            <br>&#9734; Kalorifer peteklerinin temizlenmesi.
+            <br>&#9734; Malzeme ve cihaz dolaplarının iç tozu.
+            <br>&#9734; Pnömotik cihaz ve ekipmanlarının temziliği.
+            <br>&#9734; Havalandırma ve klimaların temizliği.
+            <br>&#9734; Duvarların temizliği.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

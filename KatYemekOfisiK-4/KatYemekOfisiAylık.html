@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="KatYemekOfisiK-4/KatYemekOfisi.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>KAT YEMEK OFİSİ</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <br><p>&#9734; Havalandırmaların temizlenmesi.
+            <br>&#9734; Lambaların silinmesi.
+            <br>&#9734; Camların silinmesi.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

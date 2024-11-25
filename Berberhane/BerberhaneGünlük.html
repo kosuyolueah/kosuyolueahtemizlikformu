@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Berberhane/berberhane.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>BERBERHANE</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Kapı kolunun silinmesi ve elektrik düğmeleri silinmesi.
+                <br>&#9734; Lavaboların-musluk başlıklarının ve tuvaletlerin temizlenmesi.
+                <br>&#9734; Zeminin paspaslanması.
+                <br>&#9734; Bilgisayar ve düzeneklerinin, televizyon  tozunun alınması.
+                <br>&#9734; Masanın silinmesi.<br>*Çerçeve, telefon, ayna, askılık vb. tozunun alınması.
+                <br>&#9734; Çöp kovalarının temizliği.<br>*Traş sandalyesi, traş makinesi, saç kurutma makinesi temizliği.
+                <br>&#9734; Makas, ustura temizliği.<br>*Temizlik malzemeleri, paspas ve bezler.<br>*Havluların temizliği.
+            </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

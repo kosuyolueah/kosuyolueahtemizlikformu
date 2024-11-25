@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="UykuLaboratuvarı/UykuLaboratuvarı.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>UYKU LABORATUVARI</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Pencere ve Camların Silinmesi.
+            <br>&#9734; Perdelerin Yıkanması.
+            <br>&#9734; Duvarların Silinmesi.
+            <br>&#9734; Koltukların Temizliği.
+            <br>&#9734; Hasta Gözlem Kamerası.
+            <br>&#9734; Tavan Lambalarının Silinmesi.
+            <br>&#9734; Atık Kovalarının Temizliği.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

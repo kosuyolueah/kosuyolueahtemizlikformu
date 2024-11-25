@@ -1,0 +1,286 @@
+/* Genel Sayfa Stili */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html, body {
+   height: 100%;
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+   text-align: center;
+   overflow-y: auto; /* Sayfanın yukarı/aşağı kaymasını sağla */
+}
+
+/* Arka Plan Resmi */
+html {
+   height: 100%; /* Tüm yüksekliği kapla */
+}
+
+body {
+   background-image: url('Arka Plan.jpg'); /* Arka plan resmi yolu */
+   background-size: cover; /* Resmin boyutlarını, ekranı tamamen kaplayacak şekilde ayarla */
+   background-position: right center; /* Resmi sağa hizala, dikeyde ortala */
+   background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
+   background-attachment: fixed; /* Arka planı sabit tut, sayfa kaydırıldıkça arka plan yerinde kalır */
+   background-color: #f0f0f0; /* Arka planda resim yoksa kullanılacak yedek renk */
+}
+
+
+
+
+/* Ana Konteyner */
+.container {
+  background-color: rgba(189, 219, 247, 0.596); /* Kapsayıcı arka planını mavi tonlarında saydam bir renk ile ayarlıyoruz. */
+  border: 3px solid rgba(115, 143, 219, 0.7); /* Kapsayıcının etrafına mavi tonlarında sınır çiziyoruz. */
+  padding: 20px; /* Kapsayıcıya iç boşluk (padding) ekliyoruz. */
+  border-radius: 8px; /* Kapsayıcının köşelerini yuvarlatıyoruz. */
+  box-shadow: 0px 0px 10px rgb(0, 0, 0); /* Hafif bir gölge efekti ekliyoruz. */
+  width: 100%; /* Kapsayıcı genişliğini %100 yapıyoruz. */
+  max-width: 400px; /* Kapsayıcının maksimum genişliğini 400px olarak sınırlıyoruz. */
+  max-height: 90vh; /* Kapsayıcının yüksekliğini, ekran yüksekliğinin %90'ı ile sınırlıyoruz. */
+  overflow-y: auto; /* Yatayda değil, sadece dikeyde kaydırma çubuğu ekliyoruz. */
+  text-align: center; /* İçeriği ortalıyoruz. */
+ 
+
+}
+
+/* Başlık Stili */
+.container h4 {
+   margin-bottom: 1.5rem;
+   color: #020202;
+   font-weight: bold;
+   font-size: 1.5rem; /* rem kullanıldı */
+}
+
+/* Form Alanı Stilleri */
+input[type="text"],
+select {
+   width: 100%;
+   padding: 0.625rem; /* rem kullanıldı */
+   margin-bottom: 1.5rem;
+   border: 3px solid #ccc;
+   border-radius: 4px;
+   font-size: 1rem; /* rem kullanıldı */
+   text-align: center; /* Form içeriğini ortala */
+   background-color: #fff; /* Beyaz arka plan */
+   box-shadow: 0 2px 8px rgb(0, 0, 0); /* Hafif gölge efekti */
+}
+
+
+
+/* Gizli İçerik Bölümü */
+#dynamic-content {
+   margin-top: 1.5rem;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+   .container {
+       padding: 1rem;
+   }
+
+   input[type="text"],
+   select,
+   input[type="submit"],
+   button {
+       font-size: 0.875rem; /* rem kullanıldı */
+       padding: 0.5rem; /* rem kullanıldı */
+   }
+
+   .container h4 {
+       font-size: 1.25rem; /* rem kullanıldı */
+   }
+}
+
+@media (max-width: 480px) {
+   html, body {
+       padding: 0;
+   }
+
+   .container {
+       padding: 0.625rem; /* rem kullanıldı */
+       margin: 0.3125rem; /* rem kullanıldı */
+       max-height: 85vh;
+   }
+
+   input[type="text"],
+   select {
+       font-size: 0.875rem; /* rem kullanıldı */
+       padding: 0.375rem; /* rem kullanıldı */
+   }
+
+   .container h4 {
+       font-size: 1.125rem; /* rem kullanıldı */
+   }
+
+   input[type="submit"],
+   button {
+       font-size: 0.75rem; /* rem kullanıldı */
+       padding: 0.375rem; /* rem kullanıldı */
+   }
+}
+
+@media (max-width: 320px) {
+   .container {
+       padding: 0.3125rem; /* rem kullanıldı */
+       margin: 0.125rem; /* rem kullanıldı */
+       max-height: 80vh;
+   }
+
+   input[type="text"],
+   select {
+       font-size: 0.75rem; /* rem kullanıldı */
+       padding: 0.25rem; /* rem kullanıldı */
+   }
+
+   .container h4 {
+       font-size: 1rem; /* rem kullanıldı */
+   }
+
+   input[type="submit"],
+   button {
+       font-size: 0.625rem; /* rem kullanıldı */
+       padding: 0.25rem; /* rem kullanıldı */
+   }
+}
+
+/* Yükleniyor Spinner */
+#spinner {
+   display: none; /* Başlangıçta gizli */
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1000; /* Üstte görünmesi için */
+   background: rgba(255, 255, 255, 0.8); /* Hafif beyaz arka plan */
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+#spinner img {
+   width: 50px; /* Spinner görseli boyutu */
+   height: 50px;
+}
+.notification {
+   background-color: #f8d7da; /* Kırmızımsı arka plan */
+   color: #ff0019; /* Koyu kırmızı metin */
+   padding: 15px;
+   border: 2px solid #f3949d; /* Soluk kırmızı kenarlık */
+   border-radius: 5px;
+   margin: 20px 0;
+   font-size: 16px;
+   box-shadow: 0 2px 8px rgb(0, 0, 0); /* Hafif gölge efekti */
+}
+
+/* Ana kutu stil */
+.kare-kutu {
+   width: 100%; /* Genişlik %90 yapıldı, böylece kutu mobilde daha esnek olacak */
+   max-width: 375px; /* Maksimum genişlik 375px */
+   margin: 20px auto; /* Üst ve alt boşluk ekledik, yatayda ortaladık */
+   padding: 20px; /* İç boşluk */
+   text-align: left; /* İçeriği sola yaslar */
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge efekti */
+   background-color: rgba(189, 219, 247, 0.596); /* Kutunun arka plan rengi */
+   border-radius: 12px; /* Kenarları daha yuvarlattık */
+   border: 1px solid rgba(115, 143, 219, 0.7); /* Hafif gri kenarlık ekledik */
+   font-family: 'Arial', sans-serif; /* Varsayılan font, ihtiyaca göre değiştirilebilir */
+   box-shadow: 0px 0px 10px rgb(0, 0, 0); /* Hafif bir gölge efekti ekliyoruz. */
+}
+
+/* Paragraf stili */
+.kare-kutu p {
+   margin: 0 0 15px 0; /* Paragrafın alt kenarına boşluk ekler */
+   line-height: 1.6; /* Satır yüksekliği */
+   color: #333; /* Daha okunabilir metin rengi */
+   font-size: 16px; /* Varsayılan font büyüklüğü */
+}
+
+
+/* Responsive tasarım için medya sorguları */
+
+/* Tablet ve daha büyük ekranlar */
+@media (min-width: 768px) {
+   .kare-kutu {
+       max-width: 600px; /* Daha büyük ekranlarda kutu genişliği arttı */
+       padding: 30px; /* Daha fazla iç boşluk */
+   }
+}
+
+/* Mobil cihazlar */
+@media (max-width: 480px) {
+   .kare-kutu {
+       width: 100%; /* Mobilde kutunun genişliği %100 olacak */
+       padding: 15px; /* Daha küçük iç boşluk */
+   }
+}
+
+
+/* Checkbox ve label arasındaki boşluğu düzenleme */
+input[type="checkbox"] {
+   margin-right: 10px;
+   transform: scale(1.2);  /* Checkbox boyutunu büyütme */
+   vertical-align: middle; /* Ortalamayı iyileştirme */
+}
+
+/* Label stilini iyileştirme */
+label {
+   font-size: 16px;
+   color: #000000;
+}
+
+/* Submit butonu için stil */
+#submit {
+   margin-top: 20px;
+   padding: 10px 20px;  /* Butonun sağ ve sol padding değerlerini eşitleme */
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+   box-shadow: 0 2px 8px rgb(0, 0, 0); /* Hafif gölge efekti */
+   width: 100%; /* Submit butonunun genişliğini %50 yapalım */
+
+}
+
+/* Hover durumunda Submit butonunun rengi değişir */
+#submit:hover {
+   background-color: #45a049;
+}
+
+input[type="checkbox"]:checked + label {
+   color: #45a049;
+   font-weight: bold; /* Yazıyı kalın yapar */
+}
+
+
+/* Disable durumda olan Submit butonu için stil */
+input[type="submit"]:disabled {
+   background-color: #ddd;
+   cursor: not-allowed;
+}
+
+/* Formda boşlukları kaldırma (br etiketi görünmemeli) */
+form br {
+   display: none;
+}
+
+/* Responsive tasarım - form genişliği mobilde daha uygun hale gelir */
+@media (max-width: 600px) { 
+   form {
+       width: 100%;  /* Form genişliğini %50 yapalım */
+       margin: 0 auto; /* Ortalamayı ekleyelim */
+   }
+
+   #submit {
+       width: 100%; /* Submit butonunun genişliğini %50 yapalım */
+   }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AcilServis/AcilServis.css">
+    <title>Form</title>
+    
+</head>
+<body>
+
+    <br><h2>ACİL SERVİS</h2></br>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <div class="kare-kutu">
+        <p>&#9734; Bilgisayarlarının tozunun alınması.
+        <br>&#9734; Masaların silinmesi.
+        <br>&#9734; Sehpaların silinmesi.
+        <br>&#9734; Pencere önlerinin tozunun alınması.
+        <br>&#9734; Kapı kollarının silinmesi.
+        <br>&#9734; Dolap ve üstlerinin tozunun alınması.
+        <br>&#9734; Monitör ve diğer tıbbi cihazların silinmesi.
+        <br>&#9734; Telefonların silinmesi.
+        <br>&#9734; Bankonun silinmesi.
+        <br>&#9734; Sandalyelerin / koltukların silinmesi.
+        <br>&#9734; Cihazların kablolarının silinmesi.
+        <br>&#9734; Acil ve tedavi arabasının silinmesi.
+        <br>&#9734; Oksijen nemlendiricilerin yıkanması.
+        <br>&#9734; Hasta yemek masasının silinmesi.
+        <br>&#9734; Hasta başı panelinin silinmesi.
+        <br>&#9734; Hasta yatağı çevresinin silinmesi.
+        <br>&#9734; Travma tahtaları.
+        <br>&#9734; Hasta başı test cihazı (glikometre).
+        <br>&#9734; Çamaşır taşıma arabası.
+        <br>&#9734; Serum askılıkları.
+        <br>&#9734; Cerrahi aletler.
+        <br>&#9734; Blade.
+        <br>&#9734; Kan ve numune taşıma çantası temizliği.
+        <br>&#9734; Hasta yatağının silinmesi.
+        <br>&#9734; Defibrilatör.
+        <br>&#9734; Tablet ezici kesici aparatı.
+        <br>&#9734; İlaç taşıma çantası (soğuk zincir).
+        </p>
+    </div>
+    
+    <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

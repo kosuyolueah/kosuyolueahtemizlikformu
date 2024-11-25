@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Çamaşırhane/Çamaşırhane.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <br><h2>SAATLİK</h2> 
+    <h2>TUVALET ve LAVABO</h2></br>
+    <div class="notification">
+        *Lütfen "Bayan/Erkek/Engelli/Özel Oda/Genel WC" yapılacak İş maddelerini okuyunuz ve tamamlandığında saat dilimini seçerek "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <div class="kare-kutu">
+        <p>&#9734; Çöp Kutusu.
+        <br>&#9734; Tuvalet Kağıdı.
+        <br>&#9734; Havlu.
+        <br>&#9734; Sabun.
+    </p>
+</div>
+<br><form name="contact-form" action="SaatDilimi" method="post"></br>
+            <select name="SaatDilimi" id="SaatDilimi" required>
+                <option value="" disabled selected hidden>--Saat Seçiniz--</option>
+                <option value="07:00">07:00</option>
+                <option value="08:00">08:00</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00</option>
+                <option value="23:00">23:00</option>
+                <option value="24:00">24:00</option>
+                <option value="01:00">01:00</option>
+                <option value="02:00">02:00</option>
+                <option value="03:00">03:00</option>
+                <option value="04:00">04:00</option>
+                <option value="05:00">05:00</option>
+                <option value="06:00">06:00</option>
+
+            </select>
+            <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

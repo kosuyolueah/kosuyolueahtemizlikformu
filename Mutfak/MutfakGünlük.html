@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mutfak/Mutfak.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <h2>MUTFAK</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <br><div class="kare-kutu">
+        <p>&#9734; Yemek küveti ve servis ekipmanı temizliği.
+        <br>&#9734; Zeminin paspaslanması.
+        <br>&#9734; Soğuk hava depolarının temizliği.
+        <br>&#9734; Kuru gıda deposu temizliği.
+        <br>&#9734; Kapıların kolunun silinmesi.
+        <br>&#9734; Üretimde kullanılan bıçakların dezenfekte edilmesi.
+        <br>&#9734; Patates, soğan makinesinin temizlenmesi.
+        <br>&#9734; Sebze yıkama makinesinin temizlenmesi.
+        <br>&#9734; Tezgahların silinmesi.
+        <br>&#9734; Rafların silinmesi.
+        <br>&#9734; Bulaşık makinesinin temizlenmesi.
+        <br>&#9734; Derin dondurucuların dış yüzey temizliği.
+        <br>&#9734; Elektrik düğmelerinin silinmesi.
+        <br>&#9734; Ekmek odasının temizlenmesi.
+        <br>&#9734; Buzdolabının dış temizliği.
+        <br>&#9734; Et kesme ünitesinin temizlenmesi.
+        <br>&#9734; Termotrey temizliği.
+        <br>&#9734; Ocak ve fırının temizlenmesi.
+        <br>&#9734; Lavaboların yıkanması.
+        </p>
+    </div>
+    
+    <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

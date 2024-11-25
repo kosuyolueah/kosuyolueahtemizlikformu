@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <title>Kullanıcı Girişi</title>
+    <link rel="stylesheet" href="birimler.css">
+    <style>
+        #ZamanPeriyodu {
+            display: none;
+        }
+        .content-section {
+            display: none;
+        }
+        #spinner {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>BİRİMLER</h4>
+        <form id="contact-form">
+            <input type="text" name="fullname" id="fullname" placeholder="Adınız Soyadınız" required><br>
+            <input type="hidden" name="datetime" id="datetime">
+            <select name="Birimler" id="Birimler" required>
+                <option value="" disabled selected hidden>--Birim Seçiniz--</option>
+                <option value="Acil Servis">Acil Servis</option>
+                <option value="Ameliyathane">Ameliyathane</option>
+                <option value="Ameliyathane Odaları">Ameliyathane Odaları</option>
+                <option value="Anjiyo ve Katater Laboratuvarı">Anjiyo ve Katater Laboratuvarı</option>
+                <option value="Arşiv">Arşiv</option>
+                <option value="Atık Mahali">Atık Mahali</option>
+                <option value="Berberhane">Berberhane</option>
+                <option value="Biyokimya Laboratuvarı">Biyokimya Laboratuvarı</option>
+                <option value="Biyomedikal">Biyomedikal</option>
+                <option value="Bronkoskopi">Bronkoskopi</option>
+                <option value="Çamaşırhane">Çamaşırhane</option>
+                <option value="Destek Birimler">Destek Birimler</option>
+                <option value="Diş Polikliniği">Diş Polikliniği</option>
+                <option value="Diyalizan Yoğun Bakım Ünitesi">Diyalizan Yoğun Bakım Ünitesi</option>
+                <option value="Eczane">Eczane</option>
+                <option value="Efor">Efor</option>
+                <option value="Ekg">Ekg</option>
+                <option value="Endoskopi">Endoskopi</option>
+                <option value="Holter">Holter</option>
+                <option value="Kan Alma">Kan Alma</option>
+                <option value="Kan Gazı Ünitesi">Kan Gazı Ünitesi</option>
+                <option value="Klinik Mühendislik">Klinik Mühendislik</option>
+                <option value="Merkezi Sterilizasyon">Merkezi Sterilizasyon</option>
+                <option value="Mikrobiyoloji Laboratuvarı">Mikrobiyoloji Laboratuvarı</option>
+                <option value="Morg">Morg</option>
+                <option value="Mutfak">Mutfak</option>
+                <option value="Nükleer Tıp">Nükleer Tıp</option>
+                <option value="Ofis Koridor ve Depolar">Ofis, Koridor ve Depolar</option>
+                <option value="Ortak Alanlar">Ortak Alanlar</option>
+                <option value="Pediatri Yoğun Bakım">Pediatri Yoğun Bakım</option>
+                <option value="Poliklinik">Poliklinik</option>
+                <option value="Poliklinik Tuvaletleri">Poliklinik Tuvaletleri</option>
+                <option value="Röntgen ve Tomografi Birimi">Röntgen ve Tomografi Birimi</option>
+                <option value="Tee">Tee</option>
+                <option value="Tranfüzyon Kan Merkezi">Tranfüzyon Kan Merkezi</option>
+                <option value="Uyku Laboratuvarı">Uyku Laboratuvarı</option>
+                <option value="Yatan Hasta Klinikleri D.1">Yatan Hasta Klinikleri "D-1"</option>
+                <option value="Yatan Hasta Klinikleri D.2">Yatan Hasta Klinikleri "D-2"</option>
+                <option value="Yatan Hasta Klinikleri D.3">Yatan Hasta Klinikleri "D-3"</option>
+                <option value="Yatan Hasta Klinikleri D.4">Yatan Hasta Klinikleri "D-4"</option>
+                <option value="Kat Yemek Ofisi D.1">Kat Yemek Ofisi "D-1"</option>
+                <option value="Kat Yemek Ofisi D.2">Kat Yemek Ofisi "D-2"</option>
+                <option value="Kat Yemek Ofisi D.3">Kat Yemek Ofisi "D-3"</option>
+                <option value="Kat Yemek Ofisi D.4">Kat Yemek Ofisi "D-4"</option>
+                <option value="Yatan Hasta Klinikleri K.1">Yatan Hasta Klinikleri "K-1"</option>
+                <option value="Yatan Hasta Klinikleri K.2">Yatan Hasta Klinikleri "K-2"</option>
+                <option value="Yatan Hasta Klinikleri K.3">Yatan Hasta Klinikleri "K-3"</option>
+                <option value="Yatan Hasta Klinikleri K.4">Yatan Hasta Klinikleri "K-4"</option>
+                <option value="Kat Yemek Ofisi K.1">Kat Yemek Ofisi "K-1"</option>
+                <option value="Kat Yemek Ofisi K.2">Kat Yemek Ofisi "K-2"</option>
+                <option value="Kat Yemek Ofisi K.3">Kat Yemek Ofisi "K-3"</option>
+                <option value="Kat Yemek Ofisi K.4">Kat Yemek Ofisi "K-4"</option>
+                <option value="Yemekhane">Yemekhane</option>
+                <option value="Yoğun Bakım Ünitesi">Yoğun Bakım Ünitesi</option>
+            </select><br>
+            
+            
+            <select name="ZamanPeriyodu" id="ZamanPeriyodu" required>
+                <option value="" disabled selected hidden>--Zaman Periyodu Seçiniz--</option>
+                <option value="Saatlik">Saatlik</option>
+                <option value="Günlük">Günlük</option>
+                <option value="Haftalık">Haftalık</option>
+                <option value="Aylık">Aylık</option>
+            </select><br>
+        </form>
+
+        <div id="dynamic-content" class="content-section"></div>
+       
+    </div>
+
+    <div id="spinner">
+        <img src="W-Resimler/oie_18105924tQFkbhHA.gif" alt="Yükleniyor...">
+        <p>Form Gönderiliyor<br>Bekleyiniz...</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const now = new Date();
+            const formattedDatetime = `${String(now.getDate()).padStart(2, '0')}.${String(now.getMonth() + 1).padStart(2, '0')}.${now.getFullYear()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            document.getElementById("datetime").value = formattedDatetime;
+        };
+
+        document.getElementById("Birimler").addEventListener("change", function() {
+            const zamanPeriyodu = document.getElementById("ZamanPeriyodu");
+            zamanPeriyodu.style.display = this.value ? "block" : "none";
+            zamanPeriyodu.value = "";
+            resetDynamicContent();
+        });
+
+        document.getElementById("ZamanPeriyodu").addEventListener("change", updateContent);
+
+        function resetDynamicContent() {
+            const dynamicContent = document.getElementById("dynamic-content");
+            dynamicContent.style.display = "none";
+            dynamicContent.innerHTML = "";
+        }
+
+        function updateContent() {
+            const selectedBirim = document.getElementById("Birimler").value;
+            const selectedPeriyod = document.getElementById("ZamanPeriyodu").value;
+            const dynamicContent = document.getElementById("dynamic-content");
+
+            if (selectedBirim && selectedPeriyod) {
+                const fileName = getFileName(selectedBirim, selectedPeriyod);
+                if (fileName) {
+                    fetch(fileName)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Dosya bulunamadı');
+                            return response.text();
+                        })
+                        .then(data => {
+                            dynamicContent.innerHTML = data;
+                            dynamicContent.style.display = "block";
+                            attachFormListener();
+                        })
+                        .catch(error => {
+                            console.error('Hata:', error);
+                            alert('İçerik yüklenirken bir hata oluştu!');
+                            resetDynamicContent();
+                        });
+                }
+            } else {
+                resetDynamicContent();
+            }
+        }
+
+        function getFileName(selectedBirim, selectedPeriyod) {
+            const fileMap = {
+                "Saatlik Tuvalet ve Lavabo": {
+                    "Saatlik": "SaatlikTuvaletveLavabo/Saatlik.html",
+                },
+                "Acil Servis": {
+                    "Saatlik": "AcilServis/Saatlik.html",
+                    "Günlük": "AcilServis/AcilServisGünlük.html",
+                    "Haftalık": "AcilServis/AcilServisHaftalık.html",
+                    "Aylık": "AcilServis/AcilServisAylık.html"
+                },
+                "Ameliyathane": {
+                    "Saatlik": "Ameliyathane/Saatlik.html",
+                    "Günlük": "Ameliyathane/AmeliyathaneGünlük.html",
+                    "Haftalık": "Ameliyathane/AmeliyathaneHaftalık.html",
+                    "Aylık": "Ameliyathane/AmeliyathaneAylık.html"
+                },
+                "Ameliyathane Odaları": {
+                    "Günlük": "AmeliyathaneOdaları/AmeliyathaneOdalarıGünlük.html",
+                },
+                "Anjiyo ve Katater Laboratuvarı": {
+                    "Saatlik": "AnjiyoveKataterLaboratuvarı/Saatlik.html",
+                    "Günlük": "AnjiyoveKataterLaboratuvarı/AnjiyoveKataterLaboratuvarıGünlük.html",
+                    "Haftalık": "AnjiyoveKataterLaboratuvarı/AnjiyoveKataterLaboratuvarıHaftalık.html",
+                    "Aylık": "AnjiyoveKataterLaboratuvarı/AnjiyoveKataterLaboratuvarıAylık.html"
+                },
+                "Arşiv": {
+                    "Saatlik": "Arşiv/Saatlik.html",
+                    "Günlük": "Arşiv/ArşivGünlük.html",
+                    "Haftalık": "Arşiv/ArşivHaftalık.html",
+                    "Aylık": "Arşiv/ArşivAylık.html"
+                },
+                "Atık Mahali": {
+                    "Saatlik": "AtıkMahali/Saatlik.html",
+                    "Günlük": "AtıkMahali/AtıkMahaliGünlük.html",
+                    "Haftalık": "AtıkMahali/AtıkMahaliHaftalık.html",
+                    "Aylık": "AtıkMahali/AtıkMahaliAylık.html"
+                },
+                "Berberhane": {
+                    "Saatlik": "Berberhane/Saatlik.html",
+                    "Günlük": "Berberhane/BerberhaneGünlük.html",
+                    "Haftalık": "Berberhane/BerberhaneHaftalık.html",
+                    "Aylık": "Berberhane/BerberhaneAylık.html"
+                },
+                "Biyokimya Laboratuvarı": {
+                    "Saatlik": "BiyokimyaLaboratuvarı/Saatlik.html",
+                    "Günlük": "BiyokimyaLaboratuvarı/BiyokimyaLaboratuvarıGünlük.html",
+                    "Haftalık": "BiyokimyaLaboratuvarı/BiyokimyaLaboratuvarıHaftalık.html",
+                    "Aylık": "BiyokimyaLaboratuvarı/BiyokimyaLaboratuvarıAylık.html"
+                },
+                "Biyomedikal": {
+                    "Saatlik": "Biyomedikal/Saatlik.html",
+                    "Günlük": "Biyomedikal/BiyomedikalGünlük.html",
+                    "Haftalık": "Biyomedikal/BiyomedikalHaftalık.html",
+                    "Aylık": "Biyomedikal/BiyomedikalAylık.html"
+                },
+                "Bronkoskopi": {
+                    "Saatlik": "Bronkoskopi/Saatlik.html",
+                    "Günlük": "Bronkoskopi/BronkoskopiGünlük.html",
+                    "Haftalık": "Bronkoskopi/BronkoskopiHaftalık.html",
+                    "Aylık": "Bronkoskopi/BronkoskopiAylık.html"
+                },
+                "Çamaşırhane": {
+                    "Saatlik": "Çamaşırhane/Saatlik.html",
+                    "Günlük": "Çamaşırhane/ÇamaşırhaneGünlük.html",
+                    "Haftalık": "Çamaşırhane/ÇamaşırhaneHaftalık.html",
+                    "Aylık": "Çamaşırhane/ÇamaşırhaneAylık.html"
+                },
+                "Destek Birimler": {
+                    "Saatlik": "DestekBirimler/Saatlik.html",
+                    "Günlük": "DestekBirimler/DestekBirimlerGünlük.html",
+                    "Haftalık": "DestekBirimler/DestekBirimlerHaftalık.html",
+                    "Aylık": "DestekBirimler/DestekBirimlerAylık.html"
+                },
+                "Diş Polikliniği": {
+                    "Saatlik": "DişPolikliniği/Saatlik.html",
+                    "Günlük": "DişPolikliniği/DişPolikliniğiGünlük.html",
+                    "Haftalık": "DişPolikliniği/DişPolikliniğiHaftalık.html",
+                    "Aylık": "DişPolikliniği/DişPolikliniğiAylık.html"
+                },
+                "Diyalizan Yoğun Bakım Ünitesi": {
+                    "Saatlik": "DiyalizanYoğunBakımÜnitesi/Saatlik.html",
+                    "Günlük": "DiyalizanYoğunBakımÜnitesi/DiyalizanYoğunBakımÜnitesiGünlük.html",
+                    "Haftalık": "DiyalizanYoğunBakımÜnitesi/DiyalizanYoğunBakımÜnitesiHaftalık.html",
+                    "Aylık": "DiyalizanYoğunBakımÜnitesi/DiyalizanYoğunBakımÜnitesiAylık.html"
+                },
+                "Eczane": {
+                    "Saatlik": "Eczane/Saatlik.html",
+                    "Günlük": "Eczane/EczaneGünlük.html",
+                    "Haftalık": "Eczane/EczaneHaftalık.html",
+                    "Aylık": "Eczane/EczaneAylık.html"
+                },
+                "Efor": {
+                    "Saatlik": "Efor/Saatlik.html",
+                    "Günlük": "Efor/EforGünlük.html",
+                    "Haftalık": "Efor/EforHaftalık.html",
+                    "Aylık": "Efor/EforAylık.html"
+                },
+                "Ekg": {
+                    "Saatlik": "Ekg/Saatlik.html",
+                    "Günlük": "Ekg/EkgGünlük.html",
+                    "Haftalık": "Ekg/EkgHaftalık.html",
+                    "Aylık": "Ekg/EkgAylık.html"
+                },
+                "Endoskopi": {
+                    "Saatlik": "Endoskopi/Saatlik.html",
+                    "Günlük": "Endoskopi/EndoskopiGünlük.html",
+                    "Haftalık": "Endoskopi/EndoskopHaftalık.html",
+                    "Aylık": "Endoskopi/EndoskopiAylık.html"
+                },
+                "Holter": {
+                    "Saatlik": "Holter/Saatlik.html",
+                    "Günlük": "Holter/HolterGünlük.html",
+                    "Haftalık": "Holter/HolterHaftalık.html",
+                    "Aylık": "Holter/HolterAylık.html"
+                },
+                "Kan Alma": {
+                    "Saatlik": "KanAlma/Saatlik.html",
+                    "Günlük": "KanAlma/KanAlmaGünlük.html",
+                    "Haftalık": "KanAlma/KanAlmaHaftalık.html",
+                    "Aylık": "KanAlma/KanAlmaAylık.html"
+                },
+                "Kan Gazı Ünitesi": {
+                    "Saatlik": "KanGazıÜnitesi/Saatlik.html",
+                    "Günlük": "KanGazıÜnitesi/KanGazıÜnitesiGünlük.html",
+                    "Haftalık": "KanGazıÜnitesi/KanGazıÜnitesiHaftalık.html",
+                    "Aylık": "KanGazıÜnitesi/KanGazıÜnitesiAylık.html"
+                },
+                "Kat Yemek Ofisi K.1": {
+                    "Saatlik": "KatYemekOfisiK-1/Saatlik.html",
+                    "Günlük": "KatYemekOfisiK-1/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiK-1/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiK-1/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi K.2": {
+                    "Saatlik": "KatYemekOfisiK-2/Saatlik.html",
+                    "Günlük": "KatYemekOfisiK-2/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiK-2/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiK-2/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi K.3": {
+                    "Saatlik": "KatYemekOfisiK-3/Saatlik.html",
+                    "Günlük": "KatYemekOfisiK-3/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiK-3/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiK-3/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi K.4": {
+                    "Saatlik": "KatYemekOfisiK-4/Saatlik.html",
+                    "Günlük": "KatYemekOfisiK-4/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiK-4/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiK-4/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi D.1": {
+                    "Saatlik": "KatYemekOfisiD-1/Saatlik.html",
+                    "Günlük": "KatYemekOfisiD-1/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiD-1/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiD-1/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi D.2": {
+                    "Saatlik": "KatYemekOfisiD-2/Saatlik.html",
+                    "Günlük": "KatYemekOfisiD-2/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiD-2/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiD-2/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi D.3": {
+                    "Saatlik": "KatYemekOfisiD-3/Saatlik.html",
+                    "Günlük": "KatYemekOfisiD-3/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiD-3/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiD-3/KatYemekOfisiAylık.html"
+                },
+                "Kat Yemek Ofisi D.4": {
+                    "Saatlik": "KatYemekOfisiD-4/Saatlik.html",
+                    "Günlük": "KatYemekOfisiD-4/KatYemekOfisiGünlük.html",
+                    "Haftalık": "KatYemekOfisiD-4/KatYemekOfisiHaftalık.html",
+                    "Aylık": "KatYemekOfisiD-4/KatYemekOfisiAylık.html"
+                },
+                "Klinik Mühendislik": {
+                    "Saatlik": "KlinikMühendislik/Saatlik.html",
+                    "Günlük": "KlinikMühendislik/KlinikMühendislikGünlük.html",
+                    "Haftalık": "KlinikMühendislik/KlinikMühendislikHaftalık.html",
+                    "Aylık": "KlinikMühendislik/KlinikMühendislikAylık.html"
+                },
+                "Merkezi Sterilizasyon": {
+                    "Saatlik": "MerkeziSterilizasyon/Saatlik.html",
+                    "Günlük": "MerkeziSterilizasyon/MerkeziSterilizasyonGünlük.html",
+                    "Haftalık": "MerkeziSterilizasyon/MerkeziSterilizasyonHaftalık.html",
+                    "Aylık": "MerkeziSterilizasyon/MerkeziSterilizasyonAylık.html"
+                },
+                "Mikrobiyoloji Laboratuvarı": {
+                    "Saatlik": "MikrobiyolojiLaboratuvarı/Saatlik.html",
+                    "Günlük": "MikrobiyolojiLaboratuvarı/MikrobiyolojiLaboratuvarıGünlük.html",
+                    "Haftalık": "MikrobiyolojiLaboratuvarı/MikrobiyolojiLaboratuvarıHaftalık.html",
+                    "Aylık": "MikrobiyolojiLaboratuvarı/MikrobiyolojiLaboratuvarıAylık.html"
+                },
+                "Morg": {
+                    "Saatlik": "Morg/Saatlik.html",
+                    "Günlük": "Morg/MorgGünlük.html",
+                    "Haftalık": "Morg/MorgHaftalık.html",
+                    "Aylık": "Morg/MorgAylık.html"
+                },
+                "Mutfak": {
+                    "Saatlik": "Mutfak/Saatlik.html",
+                    "Günlük": "Mutfak/MutfakGünlük.html",
+                    "Haftalık": "Mutfak/MutfakHaftalık.html",
+                    "Aylık": "Mutfak/MutafakAylık.html"
+                },
+                "Nükleer Tıp": {
+                    "Saatlik": "NükleerTıp/Saatlik.html",
+                    "Günlük": "NükleerTıp/NükleerTıpGünlük.html",
+                    "Haftalık": "NükleerTıp/NükleerTıpHaftalık.Html",
+                    "Aylık": "NükleerTıp/NükleerTıpAylık.html"
+                },
+                "Ofis Koridor ve Depolar": {
+                    "Saatlik": "OfisKoridorDepolar/Saatlik.html",
+                    "Günlük": "OfisKoridorDepolar/OfisKoridorDepolarGünlük.html",
+                    "Haftalık": "OfisKoridorDepolar/OfisKoridorDepolarHaftalık.html",
+                    "Aylık": "OfisKoridorDepolar/OfisKoridorDepolarAylık.html"
+                },
+                "Ortak Alanlar": {
+                    "Saatlik": "OrtakAlanlar/Saatlik.html",
+                    "Günlük": "OrtakAlanlar/OrtakAlanlarGünlük.html",
+                    "Haftalık": "OrtakAlanlar/OrtakAlanlarHaftalık.html",
+                    "Aylık": "OrtakAlanlar/OrtakAlanlarAylık.html"
+                },
+                "Pediatri Yoğun Bakım": {
+                    "Saatlik": "PediatriYoğunBakım/Saatlik.html",
+                    "Günlük": "PediatriYoğunBakım/PediatriYoğunBakımGünlük.html",
+                    "Haftalık": "PediatriYoğunBakım/PediatriYoğunBakımHaftalık.html",
+                    "Aylık": "PediatriYoğunBakım/PediatriYoğunBakımAylık.html"
+                },
+                "Poliklinik": {
+                    "Saatlik": "Poliklinik/Saatlik.html",
+                    "Günlük": "Poliklinik/PoliklinikGünlük.html",
+                    "Haftalık": "Poliklinik/PoliklinikHaftalık.html",
+                    "Aylık": "Poliklinik/PoliklinikAylık.Html"
+                },
+                "Poliklinik Tuvaletleri": {
+                    "Saatlik": "PoliklinikTuvaletLavabo/Saatlik.html",
+                    "Günlük": "PoliklinikTuvaletLavabo/PoliklinikTuvaletLavaboGünlük.html",
+                    "Haftalık": "PoliklinikTuvaletLavabo/PoliklinikTuvaletLavaboHaftalık.html",
+                    "Aylık": "PoliklinikTuvaletLavabo/PoliklinikTuvaletLavaboAylık.html"
+                },
+                "Röntgen ve Tomografi Birimi": {
+                    "Saatlik": "RöntgenveTomografiBirimi/Saatlik.html",
+                    "Günlük": "RöntgenveTomografiBirimi/RöntgenveTomografiBirimiGünlük.html",
+                    "Haftalık": "RöntgenveTomografiBirimi/RöntgenveTomografiBirimiHaftalık.html",
+                    "Aylık": "RöntgenveTomografiBirimi/RöntgenveTomografiBirimiAylık.html"
+                },
+                "Tee": {
+                    "Saatlik": "Tee/Saatlik.html",
+                    "Günlük": "Tee/TeeGünlük.html",
+                    "Haftalık": "Tee/TeeHaftalık.html",
+                    "Aylık": "Tee/TeeAylık.html"
+                },
+                "Tranfüzyon Kan Merkezi": {
+                    "Saatlik": "TranfüzyonKanMerkezi/Saatlik.html",
+                    "Günlük": "TranfüzyonKanMerkezi/TranfüzyonKanMerkeziGünlük.html",
+                    "Haftalık": "TranfüzyonKanMerkezi/TranfüzyonKanMerkeziHaftalık.html",
+                    "Aylık": "TranfüzyonKanMerkezi/TranfüzyonKanMerkeziAylık.html"
+                },
+                "Uyku Laboratuvarı": {
+                    "Saatlik": "UykuLaboratuvarı/Saatlik.html",
+                    "Günlük": "UykuLaboratuvarı/UykuLaboratuvarıGünlük.html",
+                    "Haftalık": "UykuLaboratuvarı/UykuLaboratuvarıHaftalık.html",
+                    "Aylık": "UykuLaboratuvarı/UykuLaboratuvarıAylık.html"
+                },
+                "Yatan Hasta Klinikleri K.1": {
+                    "Saatlik": "YatanHastaKlinikleriK-1/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriK-1/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriK-1/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriK-1/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri K.2": {
+                    "Saatlik": "YatanHastaKlinikleriK-2/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriK-2/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriK-2/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriK-2/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri K.3": {
+                    "Saatlik": "YatanHastaKlinikleriK-3/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriK-3/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriK-3/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriK-3/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri K.4": {
+                    "Saatlik": "YatanHastaKlinikleriK-4/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriK-4/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriK-4/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriK-4/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri D.1": {
+                    "Saatlik": "YatanHastaKlinikleriD-1/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriD-1/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriD-1/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriD-1/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri D.2": {
+                    "Saatlik": "YatanHastaKlinikleriD-2/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriD-2/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriD-2/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriD-2/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri D.3": {
+                    "Saatlik": "YatanHastaKlinikleriD-3/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriD-3/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriD-3/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriD-3/YatanHastaKlinikleriAylık.html"
+                },
+                "Yatan Hasta Klinikleri D.4": {
+                    "Saatlik": "YatanHastaKlinikleriD-4/Saatlik.html",
+                    "Günlük": "YatanHastaKlinikleriD-4/YatanHastaKlinikleriGünlük.html",
+                    "Haftalık": "YatanHastaKlinikleriD-4/YatanHastaKlinikleriHaftalık.html",
+                    "Aylık": "YatanHastaKlinikleriD-4/YatanHastaKlinikleriAylık.html"
+                },
+                "Yemekhane": {
+                    "Saatlik": "Yemekhane/Saatlik.html",
+                    "Günlük": "Yemekhane/YemekhaneGünlük.html",
+                    "Haftalık": "Yemekhane/YemekhaneHaftalık.html",
+                    "Aylık": "Yemekhane/YemekhaneAylık.html"
+                },
+                "Yoğun Bakım Ünitesi": {
+                    "Saatlik": "YoğunBakımÜnitesi/Saatlik.html",
+                    "Günlük": "YoğunBakımÜnitesi/YoğunBakımÜnitesiGünlük.html",
+                    "Haftalık": "YoğunBakımÜnitesi/YoğunBakımÜnitesiHaftalık.html",
+                    "Aylık": "YoğunBakımÜnitesi/YoğunBakımÜnitesiAylık.html"
+                },
+            };
+            return fileMap[selectedBirim]?.[selectedPeriyod] || "";
+        }
+
+        function attachFormListener() {
+            const dynamicForm = document.querySelector("#dynamic-content form");
+            if (dynamicForm) {
+                dynamicForm.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const fullname = document.getElementById("fullname").value.trim();
+                    if (!fullname) {
+                        alert("Lütfen adınızı ve soyadınızı giriniz.");
+                        document.getElementById("fullname").focus();
+                        return;
+                    }
+
+                    const selectedBirim = document.getElementById("Birimler").value;
+                    const selectedPeriyod = document.getElementById("ZamanPeriyodu").value;
+                    if (!selectedBirim || !selectedPeriyod) {
+                        alert("Lütfen bir birim ve zaman periyodu seçiniz.");
+                        return;
+                    }
+
+                    const formData = new FormData(dynamicForm);
+                    formData.append('Birimler', selectedBirim);
+                    formData.append('ZamanPeriyodu', selectedPeriyod);
+                    formData.append('fullname', fullname);
+                    formData.append('datetime', document.getElementById("datetime").value);
+
+                    const status = dynamicForm.querySelector('input[name="Yapıldı"]:checked');
+                    if (status) {
+                        formData.append('Yapıldı', status.value);
+                    } else {
+                        alert('Lütfen "Yapıldı" alanını doldurun.');
+                        return;
+                    }
+
+                    // Spinner'ı göster
+                    document.getElementById("spinner").style.display = "block";
+
+                    // Birime göre URL belirleme
+            let url = '';
+            switch (selectedBirim) {
+                case "Acil Servis":
+                    url = 'https://script.google.com/macros/s/AKfycbwcztT7ciExVuQbA4jWjV32ylquOQUSbxKbBWDchDOH-SOO8wtgVMFCdqNg70V7mIZnYg/exec';
+                    break;
+                case "Ameliyathane":
+                    url = 'https://script.google.com/macros/s/AKfycbyHZuBhlbhclSuLQc6W7PaTbRJjowtIgXTpF1XLHgEM5ArYO_iY61C8FmelvhyeNI8cuQ/exec';
+                    break;
+                case "Ameliyathane Odaları":
+                    url = 'https://script.google.com/macros/s/AKfycbwf2Omsg_3WA_E-0FNyAKn2s5OkrwrBIduU7qQl6KHLCI9E-FE0IdOMwo3h2lcvoWFB/exec';
+                    break;
+                case "Anjiyo ve Katater Laboratuvarı":
+                    url = 'https://script.google.com/macros/s/AKfycbyObp2bDZbf8BwUBGjxMAaG60CHoPQIx1oaR-ckUg8Emsko8NzO9uJBu9d2gAAV9hy8/exec';
+                    break;
+                case "Arşiv":
+                    url = 'https://script.google.com/macros/s/AKfycby6wbAz58FPTYlipUohLgQCPCrR3JhNFRv1K_tYL_gSPeXpsGzM67OwA4bfHX-yD-0Rvw/exec';
+                    break;
+                case "Atık Mahali":
+                    url = 'https://script.google.com/macros/s/AKfycbwTejaVPGqQAf27r_VmS8lBEwtnhQtG9_RBDSoPlXH6P3Kmmgig9--ufyhs90OXoe2d/exec';
+                    break;
+                case "Berberhane":
+                    url = 'https://script.google.com/macros/s/AKfycbzzy6ewbSYwa200Ddp89BQqr_qtAyBnNmwYBU0m--R-WkxTHbfFY0VWZrI0_0vtuwnODg/exec';
+                    break;
+                case "Biyokimya Laboratuvarı":
+                    url = 'https://script.google.com/macros/s/AKfycbySf-MfvbT18ivXampBvuWPSgczNgfz5sxRz1kTCocVn2K_OLXE0b_kgzj4O65VEKkuEA/exec';
+                    break;
+                case "Biyomedikal":
+                    url = 'https://script.google.com/macros/s/AKfycbzReHbyziu9ep0W8Sv56lk9VjI-Arm2Eao6iJqxK7wEU_LDfl-cYRzUZ4jHmbjwJ1C6_w/exec';
+                    break;
+                case "Bronkoskopi":
+                    url = 'https://script.google.com/macros/s/AKfycbymLXllmYMSelU5PW7jtTDjwrTU1yah8JLQxeqmACWvNLUrvPICzogHpuzi-cu_4294/exec';
+                    break;
+                case "Çamaşırhane":
+                    url = 'https://script.google.com/macros/s/AKfycbwI2zqpf2Y_KDVFF8AfHWAwdAq3CzFOeRTscYc5sXQDzX7F179QEO0qd2_0p1MbV9sm/exec';
+                    break;
+                case "Destek Birimler":
+                    url = 'https://script.google.com/macros/s/AKfycbx8sywWu0y_poezDQpKiw-Zd8JTKfU-6EOcPq2zRunHRRtz3U3_GpiuTlispoIerx560Q/exec';
+                    break;
+                case "Diş Polikliniği":
+                    url = 'https://script.google.com/macros/s/AKfycbwMpT7PXdSQTJ6Oj4-n-TM-U4zj77tvqoiclQpexU5Q-vTUIs4lpQLSdcIXM-L3epl8/exec';
+                    break;
+                case "Diyalizan Yoğun Bakım Ünitesi":
+                    url = 'https://script.google.com/macros/s/AKfycbyC15oOlmcLFPc4osuQwWet6aArco1wueD6oY6mhO2JrTCCeGupCY9hdPuEBthxf66E/exec';
+                    break;
+                case "Eczane":
+                    url = 'https://script.google.com/macros/s/AKfycbxFGMP0uaSLvI-4mXfn4oSPsa6q_t5GbSbKWzEWid6Up8yCtlhejIWBJAxa9idPgwWp/exec';
+                    break;
+                case "Efor":
+                    url = 'https://script.google.com/macros/s/AKfycbxVSySYjvjwFfOipuqtyS-5VkP4qY4eRGtctVeuIhb_Cz620kxVArvXypoGUYb-7bJ_/exec';
+                    break;
+                case "Ekg":
+                    url = 'https://script.google.com/macros/s/AKfycbwNDLAL3rvmxxTXw-yUwDAh15MygLwmJuXrcKrIBSSS3oNPhzi9_5aBA-4Qal-O-T5Cng/exec';
+                    break;
+                case "Endoskopi":
+                    url = 'https://script.google.com/macros/s/AKfycbyMSDINyjoWndluqtYZJcYodSO3C_HQpMYqIovOKFZcKGtDFwgXCFgsGqSsUJcsfoYjqQ/exec';
+                    break;
+                case "Holter":
+                    url = 'https://script.google.com/macros/s/AKfycbwgEOonroaxHpkImcOLhHOaXp8qvT7mpVrB4S3Fwd_PEqTY16DFA_R9ecgWTIL5zY46/exec';
+                    break;
+                case "Kan Alma":
+                    url = 'https://script.google.com/macros/s/AKfycbz9d2aABMBQGUV7-rjpOf9_tWBH1el2O0XR3bhua4y5V3pPcGJTwjJS2e8DnG8Gc0RyNA/exec';
+                    break;
+                case "Kan Gazı Ünitesi":
+                    url = 'https://script.google.com/macros/s/AKfycbwbPMwMDitoTrOQayWigc-lFtekSVt-HeuDY90cE6nS9AjJHnrPJh4hiqgqDyG_XlN9/exec';
+                    break;
+                case "Kat Yemek Ofisi D.1":
+                    url = 'https://script.google.com/macros/s/AKfycbxXbX1EW1cvXzWVVBgS23-tVuOyf8PDBDFfsPTnEd0GxvtTnZKz-NebrMCNX_fZVI9K/exec';
+                    break;
+                case "Kat Yemek Ofisi D.2":
+                    url = 'https://script.google.com/macros/s/AKfycbwTC7Mywa-oDQZ4MpYsD5_NbxCgM3yrGlvsmcYCw_G2G6d5sgAnY-8T4ENbm4kjc726/exec';
+                    break;
+                case "Kat Yemek Ofisi D.3":
+                    url = 'https://script.google.com/macros/s/AKfycbxxF5lT-biIZ3uXiEih5pX4whbW44a2m4e_vZnkKTisA-teSZlPKmkrsOeadW5VKCys/exec';
+                    break;
+                case "Kat Yemek Ofisi D.4":
+                    url = 'https://script.google.com/macros/s/AKfycbwIUPJBfO85Kfhn2-m1V39bdTCtUYrX7ufpGSPd9XTreBoEmeLrwZQcPUqLg4eWzjeVkA/exec';
+                    break;
+                case "Kat Yemek Ofisi K.1":
+                    url = 'https://script.google.com/macros/s/AKfycbwIwlribK10IRNGLeOU5sgtB3F1PH5l7STz2blCY94Ew8TRSjLfjCNkKLAxbbBVCBbcPg/exec';
+                    break;
+                case "Kat Yemek Ofisi K.2":
+                    url = 'https://script.google.com/macros/s/AKfycbyE4tVYB8kD72hqRr18stzct5cZSCQVwh9tCNqIkIp33az0gLZIgOx8rKlF568wd8uGHw/exec';
+                    break;
+                case "Kat Yemek Ofisi K.3":
+                    url = 'https://script.google.com/macros/s/AKfycbxMdekU538QFVEi2NCu07FmjmZFWFt1BpCm8GVEooj6XXk2GZpKE4wyEWUqhS93YtugkQ/exec';
+                    break;
+                case "Kat Yemek Ofisi K.4":
+                    url = 'https://script.google.com/macros/s/AKfycbxfpZPdkDNV15cOzuiDH1YIwnphu6748VZjMb1Zq4LpABWR-szL3hBn5bVDC3dy0Uyp5A/exec';
+                    break;
+                case "Klinik Mühendislik":
+                    url = 'https://script.google.com/macros/s/AKfycbyoJJD2fjdHhUMdZJDFCgrNxAC-Z8bEJNOVkPEPAMLnpl9jUTvaV5R17CiArLQeEfsg/exec';
+                    break;
+                case "Merkezi Sterilizasyon":
+                    url = 'https://script.google.com/macros/s/AKfycbwHw3TE-m6A4PDEyLjyVDO10mVrKZiNI03vvAjkVHKFb-cgpWixTmekLeQ8yLvEx-NapA/exec';
+                    break;
+                case "Mikrobiyoloji Laboratuvarı":
+                    url = 'https://script.google.com/macros/s/AKfycbz_TLedIZqaWrr6z7fbz-7DfwZ4Pl35coYUp3eeD3O3WaxBoSfy29RKlbVzy7GF0YtYYA/exec';
+                    break;
+                case "Morg":
+                    url = 'https://script.google.com/macros/s/AKfycbwUFvVIPVMS1Tk3OJs7BRnKea6KBQhgIRFYXnc_3X57ijHg7hZ_gC0XmaNmsn475ujikg/exec';
+                    break;
+                case "Mutfak":
+                    url = 'https://script.google.com/macros/s/AKfycbxOAl8DAzJc2KfIKnCPgdmITxJkAjMuNwdYGz2PTyovbF7OFvWbds2KkbQ9XOXv_YaCIQ/exec';
+                    break;
+                case "Nükleer Tıp":
+                    url = 'https://script.google.com/macros/s/AKfycbxpeVdFAIyDBZg6yjAS0nROd55weDIBrfvLbNmJRFDYTY5S3ctH4ZV3QBMqbi8Awjh34A/exec';
+                    break;
+                case "Ofis Koridor ve Depolar":
+                    url = 'https://script.google.com/macros/s/AKfycbxOJBgCxUyyQRm9Aus41eHgeFxBd0gl8i1OQaH19hFHKXHqqn13ZDgB2qyADHg5em7X/exec';
+                    break;
+                case "Ortak Alanlar":
+                    url = 'https://script.google.com/macros/s/AKfycbxGjeBlhsqPbzajDW0BjwIM_oUZ05-kWRY9kSP4-51NZYzqw_H1Lcj8SeWNhi-8VipQ/exec';
+                    break;
+                case "Pediatri Yoğun Bakım":
+                    url = 'https://script.google.com/macros/s/AKfycbx4-cGIbySQSZr1clU6mbAs3D4I_Kh2mX2KzdkfALOTUdb9ZCthEjuhqITKDWuGMvrg/exec';
+                    break;
+                case "Poliklinik":
+                    url = 'https://script.google.com/macros/s/AKfycbzqXldDe5T8IVhNaO9e6c_EEj8uG9Wfpww8X0uho4cb_AffksUltff9XdDjPvocU5txTw/exec';
+                    break;
+                case "Poliklinik Tuvaletleri":
+                    url = 'https://script.google.com/macros/s/AKfycbygdvk3q6cNe_nBxCvCWe-f9QgF-yegMCvXDIdWZhLVlXvuFMdh1vm8mcNHL2JJtOI0zw/exec';
+                    break;
+                case "Röntgen ve Tomografi Birimi":
+                    url = 'https://script.google.com/macros/s/AKfycbylYgJUF2lFUGHcWZYT82BfPXmaXuLkatVYpetOzFRidtBfE0CwmeonSauczbRjLwBvjA/exec';
+                    break;
+                    case "Tee":
+                    url = 'https://script.google.com/macros/s/AKfycbxsl74AKVe95_iRA4hPAagJDE1V2uDhj5ssBTp51vxGVEr_yC94axWs4h9Ez_vp2ghlAA/exec';
+                    break;
+                    case "Tranfüzyon Kan Merkezi":
+                    url = 'https://script.google.com/macros/s/AKfycbwsZzKk_p7npF_jsh-UdRHid7N77URmTI4d9o7ore6-kOUUONQL4dum0bfgHHB-VoyG/exec';
+                    break;
+                    case "Uyku Laboratuvarı":
+                    url = 'https://script.google.com/macros/s/AKfycbxKOtq2oV3g-qCgs9nWbiNv09ygN9qznzxpeld0LsUks5mR3-C1xH0ANzN7-08xiH8/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri D.1":
+                    url = 'https://script.google.com/macros/s/AKfycbwTiUi2acnceCOU7-b3QqIWZh6MClYrcsUYXcpZragyMYrK-YKhvhn2MM-j5aRN3to4_w/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri D.2":
+                    url = 'https://script.google.com/macros/s/AKfycbwRESwrt8HE0vfApARupBKNTeIajGE0QSczIT1OF_Dm8oKaCvqfKCVmrJqZtS-tUlSHyA/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri D.3":
+                    url = 'https://script.google.com/macros/s/AKfycbz7LsLnUSfahh82u60tFEW7Nu9z3sD3AUhI1eoPcRKzQGxqMLdaAZ9k79xmK5SA4-X46w/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri D.4":
+                    url = 'https://script.google.com/macros/s/AKfycbx6YYqviC42CT2iXDWJEMJf39FiqmxxIkdd0FOEvGvWdsmWPl_jGdfTmZUHgl3PfD7v/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri K.1":
+                    url = 'https://script.google.com/macros/s/AKfycbxF7PHLx0ebca9PnzPvBNRxngyDtW1ExGBJK2K6e4KtcQIb9RWlZyuu8VNQ4jREX0Sqrw/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri K.2":
+                    url = 'https://script.google.com/macros/s/AKfycbw3wSSGDaSH7fXbJG60kA2v47rq_0rNhWyk0dc_wFEShgKlh2oLLibUSTi6vJl1pjWo/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri K.3":
+                    url = 'https://script.google.com/macros/s/AKfycbzYXOSmjaCsLFrdYsS8uQMKD0eEOPNLZfMB-Y9fHfEAlILWdJspQ8mDf9zLXzdkYhc/exec';
+                    break;
+                    case "Yatan Hasta Klinikleri K.4":
+                    url = 'https://script.google.com/macros/s/AKfycbzU-DDipOW8W9eCDRP0WVdHcVVZAZ2OiqJw6pjHpafFw6EnSN8SxpfrOPLXEC04j1fM/exec';
+                    break;
+                    case "Yemekhane":
+                    url = 'https://script.google.com/macros/s/AKfycbwlYGk5kS8dpMitg0cf-1oZbd_qYgy6eUKujTZvFuea1wCvkeYTN5wbWXIbEPlhCM_GrA/exec';
+                    break;
+                    case "Yoğun Bakım Ünitesi":
+                    url = 'https://script.google.com/macros/s/AKfycbyQe75XZhf6dv6UyiEBNe9qMTvq6TGxJ7xKhAHLYSId3uZEmuuuGua3Ark3fvWZ5ZbRkQ/exec';
+                    break;
+                default:
+                    alert('Geçersiz birim seçimi!');
+                    document.getElementById("spinner").style.display = "none";
+                    return;
+            }
+
+                    fetch(url, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) throw new Error('Sunucu hatası');
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Başarılı:', data);
+                        alert('Form başarıyla gönderildi!');
+                        document.getElementById('contact-form').reset();
+                        resetDynamicContent();
+                        // Kullanıcıyı index.html sayfasına yönlendir
+                        window.location.href = 'index.html';
+                    })
+                    .catch(error => {
+                        console.error('Hata:', error);
+                        alert('Form gönderiminde hata oluştu!');
+                    })
+                    .finally(() => {
+                        // Spinner'ı gizle
+                        document.getElementById("spinner").style.display = "none";
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>

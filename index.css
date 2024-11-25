@@ -1,0 +1,135 @@
+* {
+   box-sizing: border-box; /* Tüm elementlerin box modelini "border-box" olarak ayarlayarak padding ve border'ların da boyutlandırmaya dahil edilmesini sağlıyoruz. */
+   padding: 0; /* Tüm elementlerin padding değerini sıfırlıyoruz. */
+   margin: 0; /* Tüm elementlerin margin değerini sıfırlıyoruz. */
+   font-family: 'Poppins', sans-serif; /* Tüm sayfada "Poppins" fontunu kullanıyoruz. */
+   font-size: 20px; /* Tüm metinlerin font boyutunu 20px yapıyoruz. */
+}
+
+body {
+   height: 100vh; /* Sayfa yüksekliğini %100 viewport yüksekliği olarak ayarlıyoruz. */
+   display: flex; /* Flexbox düzenine geçiyoruz. */
+   align-items: center; /* İçerikleri dikeyde ortalıyoruz. */
+   justify-content: center; /* İçerikleri yatayda ortalıyoruz. */
+   margin: 0; /* Sayfanın margin değerini sıfırlıyoruz. */
+   padding: 0; /* Sayfanın padding değerini sıfırlıyoruz. */
+   font-family: Arial, sans-serif; /* Sayfa için genel font olarak Arial kullanıyoruz. */
+   background-image: url('W-Resimler/Adsız tasarım.jpg'); /* Arka plan resmi ekliyoruz. */
+   background-size: cover; /* Arka plan resmini ekranı tamamen kaplayacak şekilde ayarlıyoruz. */
+   background-position: center; /* Arka plan resmini merkeze yerleştiriyoruz. */
+   background-repeat: no-repeat; /* Arka planın tekrarlanmaması için bu özelliği kullanıyoruz. */
+}
+
+.container {
+   background-color: rgba(196, 21, 21, 0.897); /* Kapsayıcıya kırmızı tonlarında yarı saydam bir arka plan rengi veriyoruz. */
+   padding: 20px; /* Kapsayıcıya iç boşluk (padding) ekliyoruz. */
+   border-radius: 8px; /* Kapsayıcının köşelerini yuvarlatıyoruz. */
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti ekliyoruz. */
+   width: 100%; /* Kapsayıcı genişliğini %100 yapıyoruz. */
+   max-width: 400px; /* Kapsayıcının maksimum genişliğini 400px olarak sınırlıyoruz. */
+   max-height: 90vh; /* Kapsayıcının yüksekliğini, ekran yüksekliğinin %90'ı ile sınırlıyoruz. */
+   overflow-y: auto; /* Yatayda değil, sadece dikeyde kaydırma çubuğu ekliyoruz. */
+   text-align: center; /* İçeriği ortalıyoruz. */
+}
+
+.header img {
+   display: block; /* Görseli blok olarak gösteriyoruz. */
+   margin: 0 auto 20px; /* Görseli yatayda ortalayıp altına 20px boşluk ekliyoruz. */
+}
+
+h1 {
+   text-align: center; /* Başlığı ortalıyoruz. */
+   color: #000000; /* Başlık rengini siyah yapıyoruz. */
+}
+
+button {
+   display: block; /* Butonu blok olarak gösteriyoruz. */
+   width: 100%; /* Butonu genişlik olarak kapsayıcıya %100 uyacak şekilde ayarlıyoruz. */
+   padding: 10px; /* Butona iç boşluk ekliyoruz. */
+   background-color: #007BFF; /* Butonun arka plan rengini mavi yapıyoruz. */
+   color: white; /* Buton metnini beyaz yapıyoruz. */
+   border: none; /* Butonun kenarlarını kaldırıyoruz. */
+   border-radius: 5px; /* Butonun köşelerini yuvarlatıyoruz. */
+   cursor: pointer; /* Buton üzerine gelindiğinde fareyi tıklanabilir işaretçiye çeviriyoruz. */
+   margin: 0 auto; /* Butonu yatayda ortalıyoruz. */
+}
+
+button:hover {
+   background-color: #0056b3; /* Buton üzerine gelindiğinde arka plan rengini koyulaştırıyoruz. */
+}
+
+#errorMessage {
+   color: red; /* Hata mesajını kırmızı renkte yazıyoruz. */
+   text-align: center; /* Mesajı ortalıyoruz. */
+   margin-top: 10px; /* Mesajın üstüne 10px boşluk ekliyoruz. */
+   display: none; /* Hata mesajını başlangıçta gizliyoruz. */
+}
+
+.container {
+   width: 500px; /* Kapsayıcının genişliğini 500px olarak ayarlıyoruz. */
+   padding: 30px; /* Kapsayıcıya iç boşluk ekliyoruz. */
+   border: 3px solid rgba(115, 143, 219, 0.7); /* Kapsayıcının etrafına mavi tonlarında sınır çiziyoruz. */
+   border-radius: 10px; /* Kapsayıcının köşelerini yuvarlatıyoruz. */
+   background-color: rgba(189, 219, 247, 0.596); /* Kapsayıcı arka planını mavi tonlarında saydam bir renk ile ayarlıyoruz. */
+   color: white; /* İç metni beyaz yapıyoruz. */
+   box-shadow: 0 2px 8px rgb(0, 0, 0); /* Hafif bir gölge efekti ekliyoruz. */
+}
+
+h1 {
+   margin-bottom: 10px; /* Başlığın altına 10px boşluk ekliyoruz. */
+   font-size: 24px; /* Başlık boyutunu 24px yapıyoruz. */
+}
+
+input,
+textarea {
+   width: calc(100% - 20px); /* Input ve textarea elementlerinin genişliğini %100 - 20px olarak ayarlıyoruz (padding için). */
+   padding: 10px; /* İçerik boşluğu ekliyoruz. */
+   margin-bottom: 10px; /* Aşağıya 10px boşluk bırakıyoruz. */
+   border: 3px solid #ccc; /* Gri tonlarında kenarlık ekliyoruz. */
+   border-radius: 5px; /* Köşeleri yuvarlatıyoruz. */
+   background-color: rgb(255, 255, 255); /* Arka plan rengini beyaz yapıyoruz. */
+   color: #020202; /* Metin rengini koyu gri yapıyoruz. */
+   box-shadow: 0 2px 8px rgb(0, 0, 0); /* Hafif bir gölge efekti ekliyoruz. */
+}
+
+#submit {
+   background-color: rgb(38, 121, 18); /* Gönderme butonunun arka planını yeşil yapıyoruz. */
+   color: white; /* Buton metnini beyaz yapıyoruz. */
+   width: 50%; /* Butonun genişliğini %50 yapıyoruz. */
+   padding: 10px; /* İç boşluk ekliyoruz. */
+   margin-top: 10px; /* Butona üstten 10px boşluk bırakıyoruz. */
+   border-radius: 5px; /* Köşeleri yuvarlatıyoruz. */
+   border: none; /* Kenarlıkları kaldırıyoruz. */
+   cursor: pointer; /* Tıklanabilir işaretçi ekliyoruz. */
+   transition: background-color 0.3s ease; /* Arka plan renginin değişimini yumuşatıyoruz. */
+}
+
+#submit:hover {
+   background-color: #1d5c1f; /* Buton üzerine gelindiğinde daha koyu yeşil renk alıyor. */
+}
+
+body {
+   display: flex;
+   flex-direction: column; /* Sayfanın içeriğini dikey yönde yerleştiriyoruz. */
+   min-height: 100vh; /* Sayfanın yüksekliğini en az %100 viewport yüksekliği yapıyoruz. */
+}
+
+.footer {
+   text-align: center; /* Alt bilgi kısmını ortalıyoruz. */
+   margin-top: 10px; /* Üstten 10px boşluk ekliyoruz. */
+   font-size: 12px; /* Yazı boyutunu küçük yapıyoruz. */
+   color: #202020; /* Yazı rengini koyu gri yapıyoruz. */
+}
+
+a {
+   color: #9e0b0b; /* Link rengini kırmızımsı yapıyoruz. */
+   text-decoration: none; /* Linkin altını çizmesini kaldırıyoruz. */
+}
+
+.container {
+   background-color: rgba(189, 219, 247, 0.705); /* Kapsayıcıya mavi tonlarında daha saydam bir arka plan rengi veriyoruz. */
+   border: 3px solid rgba(115, 143, 219, 0.7); /* Kapsayıcının etrafına daha saydam mavi bir sınır ekliyoruz. */
+   padding: 30px; /* İçerisine boşluk ekliyoruz. */
+   border-radius: 10px; /* Köşeleri yuvarlatıyoruz. */
+   color: white; /* İç metni beyaz yapıyoruz. */
+}

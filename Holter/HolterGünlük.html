@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Holter/Holter.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>HOLTER</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; Kapı kolunun, elektrik düğmesinin silinmesi.
+            <br>&#9734; İşlem odasındaki lavaboların dezenfeksiyonu.
+            <br>&#9734; Zeminin paspaslanması.
+            <br>&#9734; Ritm ve tansiyon holter cihazlarının temizlenmesi.
+            <br>&#9734; Tansiyon manşon temizliği.
+            <br>&#9734; Bilgisayar ve düzeneklerinin tozunun alınması.
+            <br>&#9734; Masa ve desklerin silinmesi.
+            <br>&#9734; Pano, çerçeve, saat, telefon, ayna vb. tozunun alınması.
+            <br>&#9734; Personel odası ,hasta hazırlanma odası  genel temizliği.
+            <br>&#9734; Temzilik malzemeleri paspas ve bezler.
+            <br>&#9734; Cihaz taşıma çantaları.
+        </p>
+        </div>
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

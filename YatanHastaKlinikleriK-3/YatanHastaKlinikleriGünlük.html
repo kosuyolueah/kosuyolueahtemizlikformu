@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="YatanHastaKlinikleriK-3/YatanHastaKlinikleri.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>YATAN HASTA KLİNİKLERİ</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+        <!-- Kare kutu -->
+        <br><div class="kare-kutu">
+            <p>&#9734; EKG  monitörleri ve kabloları  temizliği.
+            <br>&#9734; Kapı kolunun ve elektrik düğmesi silinmesi.
+            <br>&#9734; Lavaboların dezenfeksiyonu.
+            <br>&#9734; Zeminin paspaslanması.
+            <br>&#9734; Müdehale  ve muayene odası, tıbbi atık deposu.
+            <br>&#9734; Tedavi arabaları, pansuman arabaları, kirli-temiz çamaşır taşıma arabaları, temizlik arabaları.
+            <br>&#9734; Tedavi hazırlama alanı, himss tedavi alanı.
+            <br>&#9734; Oksijen flowmetre, laringoskop blade, gayd (klavuz tel), hood.
+            <br>&#9734; Bilgisayar ve düzeneklerinin, telefon, yazıcı, barkod cihazı, wifi cihazı, televizyon ve kumanda tozunun alınması.
+            <br>&#9734; Oksijen tüpleri, hasta taşıma sandalyesi, refakatçı kartları, tedavi tepsileri, ilaç kadehleri, ilaç ezme-kesme aparatı.
+            <br>&#9734; Numune çantaları.
+            <br>&#9734; Hasta çevresi ekipmanları.
+            <br>&#9734; Ortak kullanılan aletler.
+            <br>&#9734; Masa / desklerin ve çalışma bankolarının  silinmesi.
+            <br>&#9734; Pano, çerçeve, saat , telefon, ayna, yangın dolabı ve yangın söndürme tüpleri, bilgilendirme ekranı, çağrı paneli, elektrik panelleri,  güvenlik bandı  tozunun alınması.
+            <br>&#9734; Aspiratör kavanoz temizliği.
+            <br>&#9734; Personel  dinlenme odası, depolar, eğitim odası  genel temizliği.
+            <br>&#9734; Acil arabası ve defibrilatör, acil müdehale çantası silinmesi.
+            <br>&#9734; Hasta banyosu /duş, kum torbası, traş odası.
+            <br>&#9734; Temizlik malzemeleri, paspas ve bezler.
+            <br>&#9734; Çarşaf ve diğer tekstil malzemeleri.
+        </p>
+        </div>
+
+        <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>

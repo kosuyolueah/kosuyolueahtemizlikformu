@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Çamaşırhane/Çamaşırhane.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <h2>ÇAMAŞIRHANE</h2>
+    <div class="notification">
+        *Lütfen aşağıdaki yapılacak iş maddelerini okuyunuz ve tamamlandığında "Yapıldı" olarak işaretleyip formu gönderiniz.
+    </div>
+    
+    <!-- Kare kutu -->
+    <br><div class="kare-kutu">
+        <p>&#9734; Zemin temizliği.
+        <br>&#9734; Pano, çerçeve,saat, yangın söndürme tüpü vb. tozunun alınması.
+        <br>&#9734; Sandalyelerin Silinmesi.
+        <br>&#9734; Kapıların Silinmesi.
+        <br>&#9734; Elektrik Düğmesi, ısı nem ölçerin Silinmesi.
+        <br>&#9734; Pencere Önü Tozu Alınması.
+        <br>&#9734; Depo temizliği.
+        <br>&#9734; Personel Dinlenme Odaları Temizliği.
+        <br>&#9734; Temiz alan çarşaf-nevresim dolapları Tozunun Alınması
+        <br>&#9734; Kirli mop yıkama makinesinin tozunun alınması.
+        <br>&#9734; Çamaşır tartıları.
+        <br>&#9734; Terzihane.
+        <br>&#9734; Paspas Arabası ve Temizlik Arabasının Temizliği.
+        <br>&#9734; Kirli mop yıkama alanı.
+        <br>&#9734; Temizlik Malzemeleri.
+        </p>
+    </div>
+    
+    <br>
+    <form name="contact-form" onsubmit="return showLoading();">
+        <input type="checkbox" id="Yapıldı" name="Yapıldı" value="Yapıldı">
+        <label for="Yapıldı">Yapıldı</label><br>        
+        <br><input type="submit" value="Gönder" id="submit"><br>
+    </form>
+</body>
+</html>
